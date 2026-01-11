@@ -1,0 +1,31 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model nomenclatura_ncm {
+  NCM         String?
+  DESCRIPCI_N String? @map("DESCRIPCIÓN")
+  EXTRAZONA   String?
+  Unnamed__3  BigInt? @map("Unnamed: 3")
+  Unnamed__4  String? @map("Unnamed: 4")
+  LISTA       String?
+  AUTOPARTES  BigInt?
+  Unnamed__7  BigInt? @map("Unnamed: 7")
+  INTERNOS    String?
+  Unnamed__9  String? @map("Unnamed: 9")
+  Unnamed__10 String? @map("Unnamed: 10")
+  DETALLE_1   String? @map("DETALLE 1")
+  DETALLE_2   String? @map("DETALLE 2")
+  Unnamed__13 String? @map("Unnamed: 13")
+  Unnamed__14 String? @map("Unnamed: 14")
+  Unnamed__15 String? @map("Unnamed: 15")
+  Unnamed__16 String? @map("Unnamed: 16")
+  Unnamed__17 String? @map("Unnamed: 17")
+  id          Int     @id @default(autoincrement())
+}
